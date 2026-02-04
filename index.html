@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffb6c1, #add8e6);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #c2185b;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      margin: 15px;
+      border: none;
+      border-radius: 8px;
+      background: hotpink;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: deeppink;
+    }
+
+    #message {
+      font-size: 20px;
+      margin-top: 25px;
+      color: #333;
+      display: none;
+    }
+
+    #photo-section {
+      margin-top: 30px;
+      display: none;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    #from {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 18px;
+      color: #444;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hey Love 💖</h1>
+  <h2>Are you having a bad day?</h2>
+
+  <button onclick="answerYes()">Yes 😔</button>
+  <button onclick="answerNo()">No 😊</button>
+
+  <div id="message">
+    ✨ Don’t forget you are all the colours in one at full brightness ✨
+  </div>
+
+  <div id="photo-section">
+    <p style="font-size:20px;">And don’t forget… you are HOT 🔥❤️</p>
+    <img src="photo.jpg" alt="My Beautiful Girl">
+  </div>
+
+  <div id="from">
+    — From Gurryy 💌
+  </div>
+
+  <script>
+
+    function showMainMessage() {
+      document.getElementById("message").style.display = "block";
+
+      // Show photo after 3 seconds
+      setTimeout(function() {
+        document.getElementById("photo-section").style.display = "block";
+        document.getElementById("from").style.display = "block";
+      }, 3000);
+    }
+
+    function answerYes() {
+      showMainMessage();
+    }
+
+    function answerNo() {
+      showMainMessage();
+    }
+
+  </script>
+
+</body>
+</html>
